@@ -1,0 +1,48 @@
+EXECUTABLE_1_NAME = ferns_demo
+SOURCES_1 = main mcv planar_pattern_detector planar_pattern_detector_builder \
+            affine_transformation_range buffer_management pyr_yape06 homography06 homography_estimator \
+            fine_gaussian_pyramid mcvGaussianSmoothing affine_image_generator06 fern_based_point_classifier \
+            ferns template_matching_based_tracker cmphomo
+
+CC = icpc
+LINK = icpc
+
+DEBUG_OPTIM = -g -O3 -ipo -xT -openmp -DNDEBUG
+#WARNINGS = -Wall -Wextra
+
+OPENCV_INC = `pkg-config opencv --cflags`
+ALL_LIBS_INCLUDE = $(OPENCV_INC)
+
+OPENCV_LIB = `pkg-config opencv --libs`
+
+ALL_LIBS_LIB = $(OPENCV_LIB) -lz
+
+CC_OPTIONS =  $(WARNINGS) $(DEBUG_OPTIM) $(ALL_LIBS_INCLUDE)
+LINK_OPTIONS = $(ALL_LIBS_LIB) $(DEBUG_OPTIM)
+
+
+all: $(EXECUTABLE_1_NAME) $(EXECUTABLE_2_NAME)
+
+SOURCES_1_CC = $(SOURCES_1:=.cc)
+SOURCES_1_OBJ = $(SOURCES_1:=.o)
+
+SOURCES_2_CC = $(SOURCES_2:=.cc)
+SOURCES_2_OBJ = $(SOURCES_2:=.o)
+
+$(EXECUTABLE_1_NAME): $(SOURCES_1_OBJ)
+	$(LINK) $(SOURCES_1_OBJ) $(LINK_OPTIONS) -o $(EXECUTABLE_1_NAME)
+
+$(EXECUTABLE_2_NAME): $(SOURCES_2_OBJ)
+	$(LINK) $(SOURCES_2_OBJ) $(LINK_OPTIONS) -o $(EXECUTABLE_2_NAME)
+
+.cc.o:
+	$(CC) $(CC_OPTIONS) -c $*.cc
+
+dep: depend.inc
+depend.inc:
+	g++ -MM $(ALL_LIBS_INCLUDE) $(SOURCES_1_CC) $(SOURCES_2_CC) > depend.inc
+
+clean:
+	@rm -f *~ *.o depend.inc
+
+include depend.inc
