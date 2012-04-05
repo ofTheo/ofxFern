@@ -16,6 +16,7 @@
 #include "template_matching_based_tracker.h"
 
 class ofxFern{
+
 	public:
 		
 		ofxFern();
@@ -49,6 +50,4 @@ class ofxFern{
 		bool show_keypoints;
 		planar_pattern_detector * detector;
 		template_matching_based_tracker * tracker;
-
-		
 };

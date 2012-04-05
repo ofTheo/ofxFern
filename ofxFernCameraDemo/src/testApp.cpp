@@ -1,6 +1,5 @@
 #include "testApp.h"
 
-
 //--------------------------------------------------------------
 void testApp::setup(){
 	
@@ -11,14 +10,13 @@ void testApp::setup(){
 	grabber.initGrabber(camW, camH);
 	colorImg.allocate(camW, camH);
 	img.allocate(camW, camH);
-	
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 	
 	grabber.update();	
-	if( grabber.isFrameNew() ){
+	if(grabber.isFrameNew()){
 		colorImg = grabber.getPixels();
 		img = colorImg;
 		fern.update(img);
@@ -27,11 +25,10 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	ofSetColor(0xFFFFFF);
+	ofSetColor(255);
 	fern.draw(0, 0, 640, 480);
 
 	ofDrawBitmapString("keys 1-5 do stuff\nfps: "+ofToString(ofGetFrameRate(), 2), 10, 500);
-	
 }
 
 
@@ -54,11 +51,9 @@ void testApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
-
 }
 
 //--------------------------------------------------------------
 void testApp::windowResized(int w, int h){
-
 }
 

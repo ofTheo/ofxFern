@@ -20,11 +20,11 @@ ofxFern::ofxFern(){
 
 //------------------------------------------------------------------------
 ofxFern::~ofxFern(){
-	if( detector != NULL){
+	if(detector != NULL){
 		delete detector;
 		detector = NULL;
 	}
-	if( tracker != NULL){
+	if(tracker != NULL){
 		delete tracker;
 		tracker = NULL;
 	}
