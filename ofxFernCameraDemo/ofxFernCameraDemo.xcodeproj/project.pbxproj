@@ -16,7 +16,6 @@
 		30A99808152DE20700F8DBAD /* fine_gaussian_pyramid.cc in Sources */ = {isa = PBXBuildFile; fileRef = 30A997E6152DE20700F8DBAD /* fine_gaussian_pyramid.cc */; };
 		30A99809152DE20700F8DBAD /* homography06.cc in Sources */ = {isa = PBXBuildFile; fileRef = 30A997E9152DE20700F8DBAD /* homography06.cc */; };
 		30A9980A152DE20700F8DBAD /* homography_estimator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 30A997EB152DE20700F8DBAD /* homography_estimator.cc */; };
-		30A9980B152DE20700F8DBAD /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = 30A997EE152DE20700F8DBAD /* main.cc */; };
 		30A9980D152DE20700F8DBAD /* mcv.cc in Sources */ = {isa = PBXBuildFile; fileRef = 30A997F1152DE20700F8DBAD /* mcv.cc */; };
 		30A9980E152DE20700F8DBAD /* mcvGaussianSmoothing.cc in Sources */ = {isa = PBXBuildFile; fileRef = 30A997F3152DE20700F8DBAD /* mcvGaussianSmoothing.cc */; };
 		30A9980F152DE20700F8DBAD /* planar_pattern_detector.cc in Sources */ = {isa = PBXBuildFile; fileRef = 30A997F7152DE20700F8DBAD /* planar_pattern_detector.cc */; };
@@ -102,7 +101,6 @@
 		30A997EB152DE20700F8DBAD /* homography_estimator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = homography_estimator.cc; sourceTree = "<group>"; };
 		30A997EC152DE20700F8DBAD /* homography_estimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homography_estimator.h; sourceTree = "<group>"; };
 		30A997ED152DE20700F8DBAD /* keypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keypoint.h; sourceTree = "<group>"; };
-		30A997EE152DE20700F8DBAD /* main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
 		30A997F1152DE20700F8DBAD /* mcv.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mcv.cc; sourceTree = "<group>"; };
 		30A997F2152DE20700F8DBAD /* mcv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcv.h; sourceTree = "<group>"; };
 		30A997F3152DE20700F8DBAD /* mcvGaussianSmoothing.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mcvGaussianSmoothing.cc; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 				30A997EB152DE20700F8DBAD /* homography_estimator.cc */,
 				30A997EC152DE20700F8DBAD /* homography_estimator.h */,
 				30A997ED152DE20700F8DBAD /* keypoint.h */,
-				30A997EE152DE20700F8DBAD /* main.cc */,
 				30A997F1152DE20700F8DBAD /* mcv.cc */,
 				30A997F2152DE20700F8DBAD /* mcv.h */,
 				30A997F3152DE20700F8DBAD /* mcvGaussianSmoothing.cc */,
@@ -744,7 +741,6 @@
 				30A99808152DE20700F8DBAD /* fine_gaussian_pyramid.cc in Sources */,
 				30A99809152DE20700F8DBAD /* homography06.cc in Sources */,
 				30A9980A152DE20700F8DBAD /* homography_estimator.cc in Sources */,
-				30A9980B152DE20700F8DBAD /* main.cc in Sources */,
 				30A9980D152DE20700F8DBAD /* mcv.cc in Sources */,
 				30A9980E152DE20700F8DBAD /* mcvGaussianSmoothing.cc in Sources */,
 				30A9980F152DE20700F8DBAD /* planar_pattern_detector.cc in Sources */,

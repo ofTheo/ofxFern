@@ -20,9 +20,11 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
 
+		ofVideoGrabber grabber;
+
 		ofxCvColorImage colorImg;
 		ofxCvGrayscaleImage img;
 		ofxFern fern;
 		
-		ofVideoGrabber grabber;
+		bool showTracker;
 };
