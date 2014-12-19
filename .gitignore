@@ -1,0 +1,22 @@
+*.mode1v3
+
+# xcode
+*.pbxuser
+*.perspectivev3
+xcuserdata
+build
+*.app
+*.a
+
+# OSX
+.DS_Store
+
+# codeblocks
+*.layout
+*.depend
+*.cbTemp
+example/obj
+
+# Win
+*.exe
+*.dll

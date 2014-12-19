@@ -1,14 +1,9 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
 #include "ofxOpenCv.h"
 #include "ofxFern.h"
-
-//#define _USE_LIVE_VIDEO		// uncomment this to use a live camera
-								// otherwise, we'll use a movie file
-								
 
 class testApp : public ofBaseApp{
 
@@ -25,11 +20,11 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
 
+		ofVideoGrabber grabber;
+
 		ofxCvColorImage colorImg;
 		ofxCvGrayscaleImage img;
 		ofxFern fern;
 		
-		ofVideoGrabber grabber;
+		bool showTracker;
 };
-
-#endif
