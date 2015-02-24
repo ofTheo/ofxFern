@@ -26,6 +26,11 @@
 #include <cv.h>
 #include <highgui.h>
 
+/* Newer OpenCV releases don't define CV_MIN */
+#ifndef CV_MIN
+#define CV_MIN(a, b)   ((a) <= (b) ? (a) : (b)) 
+#endif
+
 #include "mcv.h"
 
 using namespace std;
