@@ -21,6 +21,12 @@
   Street, Fifth Floor, Boston, MA 02110-1301, USA
 */
 #include <fstream>
+
+#if _MSC_VER
+#include <float.h>
+#define finite _finite
+#endif
+
 using namespace std;
 
 #include "homography_estimator.h"
